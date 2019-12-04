@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wenyang.wyblog.mapper.AdminMapper">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wenyang.wyblog.entity.Admin">
+        <id column="uid" property="uid" />
+        <result column="user_name" property="userName" />
+        <result column="password" property="password" />
+        <result column="nick_name" property="nickName" />
+        <result column="gender" property="gender" />
+        <result column="avatar" property="avatar" />
+        <result column="email" property="email" />
+        <result column="birthday" property="birthday" />
+        <result column="mobile" property="mobile" />
+        <result column="qq_number" property="qqNumber" />
+        <result column="we_chat" property="weChat" />
+        <result column="job" property="job" />
+        <result column="summary" property="summary" />
+        <result column="login_count" property="loginCount" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="last_login_ip" property="lastLoginIp" />
+        <result column="github" property="github" />
+        <result column="gitee" property="gitee" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        uid, user_name, password, nick_name, gender, avatar, email, birthday, mobile, qq_number, we_chat, job, summary, login_count, last_login_time, last_login_ip, github, gitee
+    </sql>
+
+</mapper>
